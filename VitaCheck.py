@@ -10,7 +10,7 @@ while True:
   except ValueError:
     print("Invalid input!")
 
-
+# Height input validation
 while True: 
   try:
     height = float(input("Enter your height in meters (between 0-3) "))
