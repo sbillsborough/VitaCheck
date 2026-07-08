@@ -1,13 +1,3 @@
-# #Functions
-# def weight_input():
-#   try:
-#     weight = int(input("Please enter your weight in Kgs (between 0-200) "))
-#     type(weight) == int and weight >= 0 and weight <= 200
-#     return weight
-#   except: 
-#     print("Please enter a valid weight input (Must be a number and within the specified range)")
-#     weight_input()
-
 # Weight input validation
 while True: 
   try:
