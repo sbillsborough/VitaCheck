@@ -1,3 +1,6 @@
+import math
+
+# INPUT
 # Weight input validation
 while True: 
   try:
@@ -22,8 +25,19 @@ while True:
   except ValueError:
     print("Invalid input!")
 
-# Processing
+# PROCESSING
+# Calculate BMI
+BMI = math.floor(weight / (height * height))
 
-# Output
+# OUTPUT
 print("You weigh " + str(weight) + "kgs" + " and your height is " + str(height) + " meters!")
+
+if BMI < 18.5:
+  print("Underweight: BMI=" + str(BMI) + " < 18.5")
+elif 18.5 <= BMI < 25.0:
+  print("Healthy Weight: BMI=" + str(BMI) + " <= 18.5 < 25.0")
+else:
+  print("Obese: BMI=" + str(BMI) + " >= 30.0")
+
+
 
