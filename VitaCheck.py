@@ -1,4 +1,4 @@
-import math
+# import math
 
 # INPUT
 # Weight input validation
@@ -27,17 +27,24 @@ while True:
 
 # PROCESSING
 # Calculate BMI
-BMI = math.floor(weight / (height * height))
+def bmiCalc(weight, height):
+  bmi = weight / (height * height)
+  return bmi
+
+# BMI = math.floor(weight / (height * height))
 
 # OUTPUT
-print("You weigh " + str(weight) + "kgs" + " and your height is " + str(height) + " meters!")
+finalBmi = bmiCalc(weight, height)
 
-if BMI < 18.5:
-  print("Underweight: BMI=" + str(BMI) + " < 18.5")
-elif 18.5 <= BMI < 25.0:
-  print("Healthy Weight: BMI=" + str(BMI) + " <= 18.5 < 25.0")
+print("Your BMI is", round(finalBmi, 1))
+# print("You weigh " + str(weight) + "kgs" + " and your height is " + str(height) + " meters!")
+
+if finalBmi < 18.5:
+  print("Underweight: BMI=", round(finalBmi, 1), " < 18.5")
+elif 18.5 <= finalBmi < 25.0:
+  print("Healthy Weight: BMI=", round(finalBmi, 1), " <= 18.5 < 25.0")
 else:
-  print("Obese: BMI=" + str(BMI) + " >= 30.0")
+  print("Obese: BMI=", round(finalBmi, 1), " >= 30.0")
 
 
 
